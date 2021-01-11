@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Sass</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top">
+      <a class="navbar-brand" href="#">KNote</a>
+      <a onclick="navToggleIcon(this); navToggleLeft(); navToggleRight();" class="nav-toggle-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </a>
+      <ul class="navbar-list to-right" id="navbar-list-left">
+        <!-- <li class="navbar-item">
+          <a class="navbar-link" href="#">ヘルプ</a>
+        </li> -->
+        <li class="navbar-item">
+          <a class="navbar-link" href="mainpageloggedin.html">My Notes</a>
+        </li>
+      </ul>
+      <ul class="navbar-list to-left" id="navbar-list-right">
+        <!-- <li class="navbar-link identifier">Username: <span id="usernameString"></span></li>
+        <li class="navbar-link identifier">User Id: <span id="userIdNumber"></span></li> -->
+        <li class="navbar-item" id="navbar-list-right-links">
+          <a class="navbar-link" id="logoutButton" role="button" href="#">Logout</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-container">
+      <ul class="profile-details">
+        <li>Username: <span id="usernameString"></span></li>
+        <li>User Id: <span id="userIdNumber"></span></li>
+      </ul>
+      <div class="container-inner" id="container-chatrooms">
+        <div id="buttons">
+          <button id="createChatroom" type="button" class="btn nocolor">Create a Chatroom</button>
+          <button id="allChatrooms" type="button" class="btn nocolor">Back to Chatrooms</button>
+        </div>
+        
+        <div class="" id="chatroomCreator">
+          <div>Please enter the User's ID you want to chat with:</div>
+          <div id="chatroomCreatorHeader" data-value=""></div>
+          <input id="otherUser" type="text"> 
+          <button id="submitChatroom" type="button" class="">Submit</button>
+        </div>
+
+<!-- make the chatroomText into a form so can press etner to submit -->
+        
+        <div class="" id="chat"></div>
+        <!-- <div id="chatroomNumberContainer"></div> -->
+        <div id="chatSending">
+          <div id="chatroomNumberContainer"></div>
+          <textarea id="chatroomText" placeholder="Send Message"></textarea>
+          <button id="submitChatMessege" type="button" class="btn nocolor">Send</button>
+        </div>
+        <div class='chatrooms' id="chatrooms">
+          <!-- <div class="chatroom">
+            <button class="join" type="button" id="" onclick="editmode(this)" data-value="">Join</button>
+            <div class="text" id="">Chatroom 1</div>
+            <div class="text" id="">Between User1 and User2</div>
+            <div class="timetext">Created at: 1234/12/12</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascript/myscripts.js"></script>
+    <script src="javascript/logout.js"></script>
+    <script src="javascript/chatroomgetrooms.js"></script>
+    <script src="javascript/chatroomcreate.js"></script>
+    <script src="javascript/chatroomsendmessage.js"></script>
+    <script src="javascript/chatroomjoinmessegeget.js"></script>
+
+    
+    <!-- <script src="javascript/getchat.js"></script> -->
+    <script>
+      // new PublishForm(document.forms.publish, 'publish');
+      // // random url parameter to avoid any caching issues
+      // new SubscribePane(document.getElementById('subscribe'));
+    </script>
+  </body>
+</html>

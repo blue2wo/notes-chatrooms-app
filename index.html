@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+        <title>Sass</title>
+    </head>
+    <body>
+        <nav class="navbar fixed-top">
+            <a class="navbar-brand" href="#">KNote</a>
+            <a  onclick="navToggleIcon(this); navToggleLeft(); navToggleRight();" class="nav-toggle-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </a>
+            <ul class="navbar-list to-right" id="navbar-list-left">
+                <!-- <li class="navbar-item">
+                    <a class="navbar-link" href="#">ヘルプ</a>
+                </li> -->
+            </ul>
+            <ul class="navbar-list to-left" id="navbar-list-right">
+                <li class="navbar-item">
+                    <a class="navbar-link" id="loginModalButton" href="#loginModal" role="button" data-target="modal" data-target="#loginModal">Login</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="jumbotron">
+            <h1>KNote</h1>
+            <p>By Robert Kirkman</p>
+            <a  class="btn" id="registerModalButton" href="#registerModal" role="button" data-target="modal" data-target="#registerModal">Register</a>
+            <!-- <button onclick="document.getElementById('id01').style.display='block'">Login</button> -->
+        </div>
+
+        <!-- REGISTER modal -->
+        <div class="modal fade" id="registerModal">
+            <form class="modal-content animate" id="registerform" name="registerform" method="post">
+                <div class="container">
+                    <div class="modal-title">
+                        <h5 class="modal-title" id="myModalLabel">Register</h5>
+                        <span onclick="closeModal(registerModal)" class="close" title="Close">&times;</span>
+                    </div>
+                    <div id="registerMessage"></div>
+                    <div class="form-group">
+                        <label class="sr-only" for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="password">Password/label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="password2">Confirm Password: </label>
+                        <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password">
+                    </div>
+                    <div class="modal-footer">
+                        <button id="registerFormCancel" type="button" class="btn btn-close nocolour" data-dismiss="modal">Cancel</button>
+                        <button type="submit" onclick="return validateRegisterForm()" class="btn btn-proceed nocolour">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- LOGIN modal -->
+        <div class="modal fade" id="loginModal">
+            <form class="modal-content animate" id="loginform" name="loginform">
+                <div class="container">
+                    <div class="modal-title">
+                        <h5 class="modal-title" id="myModalLabel">Login</h5>
+                        <span onclick="closeModal(loginModal)" class="close" title="Close">&times;</span>
+                    </div>
+                    <div id="loginMessage"></div>
+                    <div class="form-group">
+                        <label class="sr-only" for="loginusername">Username</label>
+                        <input type="text" class="form-control" name="loginusername" id="loginusername" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="loginpassword">Password</label>
+                        <input type="password" class="form-control" name="loginpassword" id="loginpassword" placeholder="password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-close nocolour" data-dismiss="modal">Cancel</button>
+                        <button type="submit" onclick="return validateLoginForm()" class="btn btn-proceed nocolour">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="footer fixed-bottom">
+            <div class="container">
+                <p>KNote Copyright &copy; 2019-<?php $today = date("Y"); echo $today?>.</p>
+            </div>
+        </div> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="javascript/myscripts.js"></script>
+        <script src="javascript/index.js"></script>
+        <script src="javascript/indexformvalidation.js"></script>
+        <script src="javascript/register.js"></script>
+        <script src="javascript/login.js"></script>
+    </body>
+</html>

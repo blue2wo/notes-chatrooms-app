@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Sass</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top">
+      <a class="navbar-brand" href="#">KNote</a>
+      <a  onclick="navToggleIcon(this); navToggleLeft(); navToggleRight();" class="nav-toggle-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </a>
+      <ul class="navbar-list to-right" id="navbar-list-left">
+        <!-- <li class="navbar-item">
+          <a class="navbar-link" href="#">ヘルプ</a>
+        </li> -->
+        <li class="navbar-item">
+          <a class="navbar-link" href="chatrooms.html">Chatrooms</a>
+        </li>
+      </ul>
+      <ul class="navbar-list to-left" id="navbar-list-right">
+        <!-- <li class="navbar-link identifier">Username: <span id="usernameString"></span></li>
+        <li class="navbar-link identifier">User Id: <span id="userIdNumber"></span></li> -->
+        <li class="navbar-item" id="navbar-list-right-links">
+          <a class="navbar-link" id="logoutButton" role="button" href="#">Logout</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-container">
+      <ul class="profile-details">
+        <li>Username: <span id="usernameString"></span></li>
+        <li>User Id: <span id="userIdNumber"></span></li>
+      </ul>
+      <div class="container-inner">
+        <div id="buttons">
+          <button id="addNote" type="button" class="btn nocolor">Add Note</button>
+          <button id="allNotes" type="button" class="btn nocolor">Back to All Notes</button>
+          <button id="deleteNotes" type="button" class="btn nocolor">Delete Notes</button>
+          <button id="submitEdit" type="button" class="btn nocolor">Submit Edit</button>
+          <button id="done" type="button" class="btn nocolor">Done</button>
+        </div>
+        <div class="" id="notePad">
+          <div id="notepadheader" data-value=""></div>
+          <textarea id="noteText"></textarea>
+        </div>
+        <div class='notes' id="notes">
+          <!-- <div class='note'>
+            <div class='top-holding'>
+              <button class='delete'>DELETE</button>
+            </div>
+            <div class='noteheader' id='$note_id'>
+              <div class='text'>This is a test note</div>
+              <div class='timetext'>1992 May 15 8:05AM</div>   
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+ <!-- <div class="footer fixed-bottom">
+      <div class="container">
+      <p>KNote Copyright &copy; 2019-<?php $today = date("Y"); echo $today?>.</p>
+    </div>
+  </div> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascript/myscripts.js"></script>
+    <script src="javascript/logout.js"></script>
+    <script src="javascript/createnotes.js"></script>
+    <script src="javascript/deletenote.js"></script>
+    <script src="javascript/editnotes.js"></script>
+    <script src="javascript/getnotes.js"></script>
+  </body>
+</html>
